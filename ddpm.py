@@ -1513,7 +1513,7 @@ def sample(args, config):
     ##dataset = datasets.CIFAR10(CIFAR10_DATA_DIR, train=False, download=True, transform=transforms.ToTensor())
     transform = transforms.Compose([transforms.Resize(256), transforms.CenterCrop(224), transforms.ToTensor()])
     dataset = datasets.ImageFolder(root=IMAGENET_DATA_DIR, transform=transform)
-    dataloader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, shuffle=False)
+    dataloader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, shuffle=True)
 
 
     print("dataset loaded ===========================================================")
